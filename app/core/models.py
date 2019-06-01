@@ -32,3 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
+
+class Tag(models.Model):
+    """Tag to be used"""
+    name = models.CharField(max_length=255)
